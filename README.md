@@ -58,12 +58,19 @@ Question 6: How can you verify the action has been dispatched?<br>
 Answer: We can React devtool to track any state updation as state tree, action and dispatches. And also in install redux-logger middleware to track the state tree, actions and dispatch methods
 
 ## Task 6:
-Question 7: explain the use of `useEffect` hook in React
-Question 8: What is A High Order Component?
+Question 7: explain the use of `useEffect` hook in React<br>
+Answer: To perform side effect in functional components, like updating or changing the dom or call api's and cleaning the functions when component unmount<bt>
+Question 8: What is A High Order Component?<br>
+Answer: It is a function that takes a component and returns a new component with enhanced common functionality
 Question 9: What use cases would a HOC be usefull?
-Question 10: What does it indicate when a component is prefixed with `use` and `with`
-Question 11: What is a Generic type in typescript?
-Question 12: Whats the difference between a controlled and uncontrolled input in React?
+Answer: When ever we want to reuse some function and want to access those functionality in more than one component that time HOC will be usefull<br>
+Question 10: What does it indicate when a component is prefixed with `use` and `with`<br>
+`use` defines hook to functional component. Hook are use `use` as prefix and `with` define HOC and it's start with `with`. <br>
+Question 11: What is a Generic type in typescript?<br>
+Answer: Typescript allows us with different data types of javascript for safe checking of those data types.<br>
+Question 12: Whats the difference between a controlled and uncontrolled input in React?<br>
+Answer: Controlled input is an element whose value is controlled by React state.
+An uncontrolled input is an input that maintains its own internal state. We use a `ref` to access the DOM element's value directly.
 
 
 
