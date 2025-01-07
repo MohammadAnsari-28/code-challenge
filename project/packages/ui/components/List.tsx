@@ -1,4 +1,5 @@
 import React from "react";
+import "./List.css";
 
 interface ListProps {
   data: {
@@ -9,7 +10,7 @@ interface ListProps {
 
 export const List: React.FC<ListProps> = ({ data }) => {
   return (
-    <>
+    <div className="container">
       {data.map((item: { name: string; url: string }) => {
         return (
           <div className="card">
@@ -17,6 +18,6 @@ export const List: React.FC<ListProps> = ({ data }) => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
