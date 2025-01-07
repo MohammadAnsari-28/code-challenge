@@ -1,5 +1,22 @@
-import React from 'react'
+import React from "react";
 
-export const List = () => {
-  return <p>List</p>
+interface ListProps {
+  data: {
+    name: string;
+    url: string;
+  }[];
 }
+
+export const List: React.FC<ListProps> = ({ data }) => {
+  return (
+    <>
+      {data.map((item: { name: string; url: string }) => {
+        return (
+          <div className="card">
+            <p className="card-name">{item.name}</p>
+          </div>
+        );
+      })}
+    </>
+  );
+};
