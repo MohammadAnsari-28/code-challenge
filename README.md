@@ -23,7 +23,9 @@ Start the test by Forking this repository, and complete the following tasks:<br>
 ## Task 1:
 Assignment: Use the `api` found in `App.tsx` to make a request and fetch a list of all Pokémon.<br>
 Question 1: How did you manage to fetch the list and what tool did you use?<br>
+Answer: Created a custome hook(useFetchApi) and used 'fetch' javascript inbuild method to fetch api.<br>
 Question 2: What steps would you take to future improve this?<br>
+Answer: We can use any open sourse libraries like React Query or axios or we can move this to redux middleware like saga and thunk. And with the help of redux-toolkit we can use creatAsynThunk and we can use the same fecth api inside.<br>
 
 commit the code as `task-1`<br>
 

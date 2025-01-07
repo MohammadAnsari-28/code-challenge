@@ -1,14 +1,19 @@
-import { List } from 'ui'
-
-const api = "https://pokeapi.co/api/v2/pokemon?limit=151"
+import { List } from "ui";
+import useFetchApi from "./useFetchApi";
 
 const App = () => {
-  return (
-  <>
-    <h1>Pokemon list:</h1>
-    <List />
-  </>
-  )
-}
+  const { data, loading, error } = useFetchApi();
+  console.log("ansari", data);
 
-export default App
+  if (error) return <p style={{ fontSize: 20, fontWeight: 600 }}>{error}</p>;
+
+  return (
+    <>
+      <h1 style={{ justifyContent: "center", display: "flex", width: "100%" }}>
+        Pokemon
+      </h1>
+      {loading ? <div>Loading....</div> : <List />}
+    </>
+  );
+};
+export default App;
