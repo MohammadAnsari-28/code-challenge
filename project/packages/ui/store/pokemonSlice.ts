@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 
 interface Pokemon {
   name: string;
@@ -30,7 +30,13 @@ const initialState: PokemonState = {
 const pokemonSlice = createSlice({
   name: "pokemon",
   initialState,
-  reducers: {},
+  reducers: {
+    removePokemon: (state, action: PayloadAction<string>) => {
+      state.data = state.data.filter(
+        (pokemon) => pokemon.name !== action.payload
+      );
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchPokemon.pending, (state) => {
@@ -49,3 +55,4 @@ const pokemonSlice = createSlice({
 });
 
 export default pokemonSlice.reducer;
+export const { removePokemon } = pokemonSlice.actions;

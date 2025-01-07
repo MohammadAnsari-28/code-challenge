@@ -54,7 +54,8 @@ commit the code as `task-4`<br>
 
 ## Task 5:
 Assignment: Create button for each pokémon where an Action will be dispatched to remove the pokémon from the store 
-Question 6: How can you verify the action has been dispatched?
+Question 6: How can you verify the action has been dispatched?<br>
+Answer: We can React devtool to track any state updation as state tree, action and dispatches. And also in install redux-logger middleware to track the state tree, actions and dispatch methods
 
 ## Task 6:
 Question 7: explain the use of `useEffect` hook in React
